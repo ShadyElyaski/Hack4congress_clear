@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Landing" translatesAutoresizingMaskIntoConstraints="NO" id="iDg-Z8-oKK">
+                    <rect key="frame" x="58" y="56" width="258" height="378"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="307" id="AR8-d0-0ii"/>
+                        <constraint firstAttribute="height" constant="378" id="CXO-WT-3u7"/>
+                        <constraint firstAttribute="width" constant="258" id="IjH-Uh-Uew"/>
+                        <constraint firstAttribute="height" constant="255" id="c2f-yV-uxQ"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="AR8-d0-0ii"/>
+                            <exclude reference="c2f-yV-uxQ"/>
+                        </mask>
+                    </variation>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="0.25098039215686274" green="0.27450980392156865" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="iDg-Z8-oKK" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="87" id="IgE-3n-8r8"/>
+                <constraint firstAttribute="centerX" secondItem="iDg-Z8-oKK" secondAttribute="centerX" id="NXC-IM-LGf"/>
+                <constraint firstAttribute="bottom" secondItem="iDg-Z8-oKK" secondAttribute="bottom" constant="174" id="O5c-Or-vDG"/>
+                <constraint firstItem="iDg-Z8-oKK" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="51" id="Uya-hv-1eT"/>
+                <constraint firstAttribute="trailing" secondItem="iDg-Z8-oKK" secondAttribute="trailing" constant="86" id="ceM-fe-5cl"/>
+                <constraint firstAttribute="centerY" secondItem="iDg-Z8-oKK" secondAttribute="centerY" constant="88" id="uxj-7z-TBp"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="IgE-3n-8r8"/>
+                    <exclude reference="O5c-Or-vDG"/>
+                    <exclude reference="Uya-hv-1eT"/>
+                    <exclude reference="ceM-fe-5cl"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="547.5" y="454.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Landing" width="448" height="541"/>
+    </resources>
+</document>

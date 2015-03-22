@@ -1,0 +1,16 @@
+PODS:
+  - Firebase (2.2.0)
+  - OpenSans (1.0.3)
+  - SVProgressHUD (1.1.2)
+
+DEPENDENCIES:
+  - Firebase (>= 2.2.0)
+  - OpenSans
+  - SVProgressHUD
+
+SPEC CHECKSUMS:
+  Firebase: e7a2ea2ffeff99f9c37028b354194dcc9718d36b
+  OpenSans: fb4374107f269022e5067380e477ff9f1436ee53
+  SVProgressHUD: da7a49e789af645d9279ffbca62318945a832438
+
+COCOAPODS: 0.36.0
