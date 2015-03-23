@@ -5,6 +5,7 @@ target 'Clear' do
     pod 'Firebase', '>= 2.2.0'
     pod 'SVProgressHUD'
     pod 'OpenSans'
+    pod 'MagicPie'
 end
 
 target 'ClearTests' do

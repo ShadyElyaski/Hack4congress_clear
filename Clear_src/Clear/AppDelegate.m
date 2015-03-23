@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import <OpenSans/UIFont+OpenSans.h>
+#import <Fabric/Fabric.h>
+#import <Crashlytics/Crashlytics.h>
 
 @interface AppDelegate ()
 
@@ -25,6 +27,7 @@
     [UITextField appearance].font = [UIFont openSansFontOfSize:16];
     [UINavigationBar appearance].titleTextAttributes = [NSDictionary dictionaryWithObjects:@[[UIFont openSansBoldFontOfSize:20], [UIColor whiteColor]] forKeys:@[NSFontAttributeName, NSForegroundColorAttributeName]];
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:NO];
+    [Fabric with:@[CrashlyticsKit]];
     return YES;
 }
 

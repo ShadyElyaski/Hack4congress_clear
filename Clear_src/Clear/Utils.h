@@ -11,4 +11,5 @@
 
 @interface Utils : NSObject
 +(void)checkBiometricWithSender:(UIViewController *)sender;
++(void)postBiometricCheckWithSender:(UIViewController *)sender;
 @end

@@ -28,7 +28,7 @@
 
 - (IBAction)signupBtnPressed:(id)sender {
     if ([self validateData]) {
-        [SVProgressHUD showWithStatus:@"Logging Up..."];
+        [SVProgressHUD showWithStatus:@"Logging In..."];
         
         Firebase *ref = [[Firebase alloc] initWithUrl:@"https://clear.firebaseio.com"];
         [ref authUser:_emailTxtView.text password:_passwordTxtView.text

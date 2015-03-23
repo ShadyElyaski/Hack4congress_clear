@@ -10,4 +10,5 @@
 
 @interface BillViewController : UIViewController
 @property (nonatomic, strong) NSDictionary *billDic;
+@property (nonatomic, assign) int index;
 @end

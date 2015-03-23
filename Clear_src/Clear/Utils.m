@@ -8,6 +8,7 @@
 
 #import "Utils.h"
 #import <LocalAuthentication/LocalAuthentication.h>
+#import "AppDelegate.h"
 
 @implementation Utils
 
@@ -43,8 +44,9 @@
 }
 
 +(void)postBiometricCheckWithSender:(UIViewController *)sender{
+    [sender dismissViewControllerAnimated:YES completion:nil];
     UINavigationController *navCntrl = [sender.storyboard instantiateViewControllerWithIdentifier:@"BillsNavCntrl"];
-    [sender presentViewController:navCntrl animated:YES completion:nil];
+    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:navCntrl animated:YES completion:nil];
 }
 
 @end

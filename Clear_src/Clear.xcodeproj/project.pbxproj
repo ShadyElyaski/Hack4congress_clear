@@ -19,6 +19,9 @@
 		967DB9C71ABEA941006AC26C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 967DB9C61ABEA941006AC26C /* Images.xcassets */; };
 		967DB9CA1ABEA941006AC26C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 967DB9C81ABEA941006AC26C /* LaunchScreen.xib */; };
 		967DB9D61ABEA941006AC26C /* ClearTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 967DB9D51ABEA941006AC26C /* ClearTests.m */; };
+		96CC8E031ABF56E400DC95A8 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96CC8E011ABF56E400DC95A8 /* Crashlytics.framework */; };
+		96CC8E041ABF56E400DC95A8 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96CC8E021ABF56E400DC95A8 /* Fabric.framework */; };
+		96CC8E071ABF5DE700DC95A8 /* GuestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96CC8E061ABF5DE700DC95A8 /* GuestViewController.m */; };
 		B140A4BF369EC1470FC44D08 /* libPods-Clear.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C01FA59D67999C7CC80EA97C /* libPods-Clear.a */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +60,10 @@
 		967DB9CF1ABEA941006AC26C /* ClearTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClearTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		967DB9D41ABEA941006AC26C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		967DB9D51ABEA941006AC26C /* ClearTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClearTests.m; sourceTree = "<group>"; };
+		96CC8E011ABF56E400DC95A8 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		96CC8E021ABF56E400DC95A8 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		96CC8E051ABF5DE700DC95A8 /* GuestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuestViewController.h; sourceTree = "<group>"; };
+		96CC8E061ABF5DE700DC95A8 /* GuestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuestViewController.m; sourceTree = "<group>"; };
 		C01FA59D67999C7CC80EA97C /* libPods-Clear.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Clear.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE38719BE522D885A9AEA1DC /* Pods-Clear.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Clear.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Clear/Pods-Clear.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -66,7 +73,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96CC8E031ABF56E400DC95A8 /* Crashlytics.framework in Frameworks */,
 				B140A4BF369EC1470FC44D08 /* libPods-Clear.a in Frameworks */,
+				96CC8E041ABF56E400DC95A8 /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +101,8 @@
 		77B7330354F13B5966B0B442 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				96CC8E011ABF56E400DC95A8 /* Crashlytics.framework */,
+				96CC8E021ABF56E400DC95A8 /* Fabric.framework */,
 				C01FA59D67999C7CC80EA97C /* libPods-Clear.a */,
 			);
 			name = Frameworks;
@@ -133,6 +144,8 @@
 				9602BD441ABECC7400B73787 /* BillsTableViewController.m */,
 				9602BD461ABF373200B73787 /* BillViewController.h */,
 				9602BD471ABF373200B73787 /* BillViewController.m */,
+				96CC8E051ABF5DE700DC95A8 /* GuestViewController.h */,
+				96CC8E061ABF5DE700DC95A8 /* GuestViewController.m */,
 				967DB9C61ABEA941006AC26C /* Images.xcassets */,
 				967DB9C81ABEA941006AC26C /* LaunchScreen.xib */,
 				9602BD3D1ABEC85600B73787 /* Utils.h */,
@@ -180,6 +193,7 @@
 				967DB9B31ABEA941006AC26C /* Frameworks */,
 				967DB9B41ABEA941006AC26C /* Resources */,
 				57E1A0A0BD8B399289652F6D /* Copy Pods Resources */,
+				96CC8E001ABF56BF00DC95A8 /* Fabric */,
 			);
 			buildRules = (
 			);
@@ -219,6 +233,7 @@
 				TargetAttributes = {
 					967DB9B51ABEA941006AC26C = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = 85FHKXX3A2;
 					};
 					967DB9CE1ABEA941006AC26C = {
 						CreatedOnToolsVersion = 6.2;
@@ -296,6 +311,20 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Clear/Pods-Clear-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		96CC8E001ABF56BF00DC95A8 /* Fabric */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Fabric;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run 6837ddc615659c8387d7700244213076608af6b7 dfb9f43594dd569054a5c2ba0076f2a91c3402220a4c22601b640caa2a00f72c";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -307,6 +336,7 @@
 				9602BD481ABF373200B73787 /* BillViewController.m in Sources */,
 				9602BD421ABECAFC00B73787 /* LoginTableViewController.m in Sources */,
 				967DB9BF1ABEA941006AC26C /* AppDelegate.m in Sources */,
+				96CC8E071ABF5DE700DC95A8 /* GuestViewController.m in Sources */,
 				967DB9BC1ABEA941006AC26C /* main.m in Sources */,
 				9602BD3F1ABEC85600B73787 /* Utils.m in Sources */,
 				9602BD3C1ABEB57B00B73787 /* SignupTableViewController.m in Sources */,
@@ -435,9 +465,16 @@
 			baseConfigurationReference = EE38719BE522D885A9AEA1DC /* Pods-Clear.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Shady Elyaski (D82MENA7W3)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Clear/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "4889fc3b-17b5-4518-a5e8-cd81fe2d8a8d";
 			};
 			name = Debug;
 		};
@@ -446,9 +483,16 @@
 			baseConfigurationReference = 6ECCF8587888309BE28057D3 /* Pods-Clear.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Shady Elyaski (D82MENA7W3)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Clear/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "4889fc3b-17b5-4518-a5e8-cd81fe2d8a8d";
 			};
 			name = Release;
 		};

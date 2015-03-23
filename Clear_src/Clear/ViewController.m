@@ -10,14 +10,23 @@
 #import <Firebase/Firebase.h>
 #import <SVProgressHUD/SVProgressHUD.h>
 #import "Utils.h"
+#import "AppDelegate.h"
+#import <OpenSans/UIFont+OpenSans.h>
 
 @interface ViewController (){
     BOOL isFirstRun;
 }
+@property (weak, nonatomic) IBOutlet UIButton *guestBtn;
 
 @end
 
 @implementation ViewController
+
+- (IBAction)guestLoginBtnPressed:(id)sender {
+    AppDelegate *delegate = [UIApplication sharedApplication].delegate;
+    [delegate setGuestLogin:YES];
+    [Utils postBiometricCheckWithSender:self];
+}
 
 - (IBAction)loginBtnPressed:(id)sender {
     [self login:YES];
@@ -53,6 +62,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setNeedsStatusBarAppearanceUpdate];
+    [_guestBtn.titleLabel setFont:[UIFont openSansFontOfSize:16]];
     // Do any additional setup after loading the view, typically from a nib.
 }
 

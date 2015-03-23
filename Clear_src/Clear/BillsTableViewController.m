@@ -9,6 +9,8 @@
 #import "BillsTableViewController.h"
 #import <SVProgressHUD/SVProgressHUD.h>
 #import "BillViewController.h"
+#import "AppDelegate.h"
+#import "GuestViewController.h"
 
 @interface BillsTableViewController (){
     NSArray *billArr;
@@ -38,6 +40,10 @@
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
     [textField resignFirstResponder];
     return YES;
+}
+
+- (IBAction)menuBtnPressed:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 -(void)viewDidAppear:(BOOL)animated{
@@ -108,7 +114,20 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
+    AppDelegate *delegate = [UIApplication sharedApplication].delegate;
+    if (delegate.guestLogin) {
+        GuestViewController *vuCntrl = [self.storyboard instantiateViewControllerWithIdentifier:@"GuestViewController"];
+        NSDictionary *billDic = billArr[indexPath.row];
+        [vuCntrl setBillDic:billDic];
+        [vuCntrl setIndex:(int)indexPath.row];
+        [self.navigationController pushViewController:vuCntrl animated:YES];
+    }else{
+        BillViewController *vuCntrl = [self.storyboard instantiateViewControllerWithIdentifier:@"BillViewController"];
+        NSDictionary *billDic = billArr[indexPath.row];
+        [vuCntrl setBillDic:billDic];
+        [vuCntrl setIndex:(int)indexPath.row];
+        [self.navigationController pushViewController:vuCntrl animated:YES];
+    }
 }
 
 /*
@@ -151,9 +170,6 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-    
-    NSDictionary *billDic = billArr[self.tableView.indexPathForSelectedRow.row];
-    [(BillViewController *) segue.destinationViewController setBillDic:billDic];
 }
 
 
